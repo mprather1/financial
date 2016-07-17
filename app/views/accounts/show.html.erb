@@ -1,7 +1,25 @@
 <h1><%= @account.description %></h1>
 <table>
   <tr>
-    <th>Balance: </th>
+    <th>Total Balance: </th>
     <td><%= @account.balance %></td>
   </tr>
+</table>
+
+<hr>
+
+<table>
+  <tr>
+    <th>Record</th>
+    <th>Amount</th>
+    <th>Created At</th>
+  </tr>
+  <% @account.records.each do |f| %>
+    <tr>
+      <td><%= f.memo %></td>
+      <td><%= f.amount %></td>
+      <td><%= f.created_at.strftime("%I:%M %p %m/%d/%Y") %></td>
+    </tr>
+  <% end %>
+
 </table>

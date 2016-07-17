@@ -9,5 +9,5 @@
 Account.create(description: 'new account', balance: 1234.21)
 
 5.times do |x|
-  Record.create(account_id: 1, amount: Faker::Number.decimal(2))
+  Record.create(account_id: 1, memo: Faker::Hacker.noun, amount: Faker::Number.decimal(2))
 end
