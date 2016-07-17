@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'records/index'
+
+  get 'records/show'
+
+  get 'records/new'
+
   root 'accounts#index'
   resources :accounts
 
