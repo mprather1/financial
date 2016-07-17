@@ -6,7 +6,7 @@
   </tr>
   <% @accounts.each do |f| %>
     <tr>
-      <td><%= f.description %></td>
+      <td><%= link_to f.description, account_path(f) %></td>
       <td><%= f.balance %></td>
     </tr>
   <% end %>

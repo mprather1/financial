@@ -1,2 +1,7 @@
-<h1>Accounts#show</h1>
-<p>Find me in app/views/accounts/show.html.erb</p>
+<h1><%= @account.description %></h1>
+<table>
+  <tr>
+    <th>Balance: </th>
+    <td><%= @account.balance %></td>
+  </tr>
+</table>
