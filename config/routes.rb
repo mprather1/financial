@@ -1,12 +1,11 @@
 Rails.application.routes.draw do
-  get 'records/index'
-
-  get 'records/show'
-
-  get 'records/new'
 
   root 'accounts#index'
-  resources :accounts
+  resources :accounts do
+    resources :records
+  end
+
+  resources :records
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -6,6 +6,8 @@
   </tr>
 </table>
 
+<%= link_to "New Record", new_account_record_path(@account) %>
+
 <hr>
 
 <table>
@@ -21,5 +23,17 @@
       <td><%= f.created_at.strftime("%I:%M %p %m/%d/%Y") %></td>
     </tr>
   <% end %>
+  <tr>
+    <th>
+      <%= form_for([ @account, @account.records.build], method: :post) do |f| %>
+      <%= render(partial: 'records/form', locals: {f: f}) %>
+      <%= f.submit("Submit") %>
+      <% end %>
+    </th>
+  </tr>
+  <tr>
+    <th>Total: </th>
+    <td><%= @account.balance %></td>
+  </tr>
 
 </table>

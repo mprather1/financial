@@ -6,8 +6,4 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Account.create(description: 'new account', balance: 1234.21)
-
-5.times do |x|
-  Record.create(account_id: 1, memo: Faker::Hacker.noun, amount: Faker::Number.decimal(2))
-end
+Account.create(description: 'new account')
